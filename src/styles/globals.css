@@ -1,0 +1,66 @@
+/* Header fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading font-normal;
+  }
+  h1 {
+    @apply text-h1 leading-h1;
+  }
+  h2 {
+    @apply text-h2 leading-h2;
+  }
+  h3 {
+    @apply text-h3 leading-h3;
+  }
+  h4 {
+    @apply text-h4 leading-h4;
+  }
+  h5 {
+    @apply text-h5 leading-h5;
+  }
+  h6 {
+    @apply text-h6 leading-h6;
+  }
+
+  p,
+  span {
+    @apply font-sans text-base leading-base;
+  }
+
+  input {
+    @apply text-base text-gray-800;
+  }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    -moz-appearance: textfield;
+  }
+}
+
+@layer components {
+  .button-padding {
+    @apply py-12 px-32;
+  }
+
+  .required:after {
+    @apply text-error-600;
+    content: " *";
+  }
+
+  .animate-button-icon {
+    transform: translateX(8px);
+  }
+}
